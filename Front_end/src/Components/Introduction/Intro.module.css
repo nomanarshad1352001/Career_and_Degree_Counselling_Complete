@@ -1,0 +1,98 @@
+.Card {
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(4px);
+  border: 3px solid rgba(246, 246, 246, 0.25);
+  text-align: center;
+  border-radius: 20px;
+  padding: 0.7rem;
+  box-shadow: 0 5px 15px rgba(212, 212, 212, 0.25);
+  margin: 20px 7px 10px 7px;
+  display: flex;
+  flex-direction: column;
+}
+.Card:hover {
+  transition: transform 0.6s;
+  box-shadow:inset 10px 10px 10px 10px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.title {
+  color: #ff4e22;
+  font-size: 15px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.Subtitle{
+  font-size: 12px;
+  padding-bottom: 8px;
+}
+.description{
+  font-size: 15px;
+  padding: 10px 0 15px 0;
+  height: 100%;
+  word-wrap: break-word;
+  font-family: 'Capriola', sans-serif;
+}
+.mainImage {
+  width: 100%;
+  height: 12rem;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.mainImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Card .btncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -20px;
+  gap: 5px;
+}
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 14px;
+  }
+  .Subtitle{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mainImage {
+    width: 100%;
+  }
+  .title {
+    font-size: 12px;
+  }
+  .Subtitle{
+    font-size: 11px;
+  }
+  .description{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .title {
+    color: blueviolet;
+    font-size: 10px;
+  }
+  .Subtitle{
+    font-size: 9px;
+  }
+  .description{
+    font-size: 10px;
+  }
+}
+

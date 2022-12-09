@@ -1,0 +1,63 @@
+.btn {
+  min-width: 55px;
+  height: 30px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0px 5px 0px 5px;
+  margin: 0px -5px 0px 12px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: none;
+  z-index: 1;
+  font-weight: bold;
+  white-space: nowrap;
+  font-family: "Capriola", sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+.btn:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  color: #fff;
+  transition: transform 0.6s;
+  transform: scale(1.1);
+}
+.btn:hover:after {
+  left: 0;
+  width: auto;
+}
+.btn:active {
+  top: 2px;
+}
+@media screen and (max-width: 600px) {
+  .btn {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .btn {
+    font-size: 0.6rem;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .btn {
+    font-size: 0.5rem;
+    min-width: 45px;
+  }
+}

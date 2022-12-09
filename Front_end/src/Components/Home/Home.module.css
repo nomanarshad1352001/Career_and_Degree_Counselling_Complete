@@ -1,0 +1,29 @@
+.Maincontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+.mainImage {
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  text-align: center;
+}
+.mImage {
+  width: 90%;
+  padding: 50px;
+}
+@media screen and (max-width: 550px) {
+  .container {
+   width: 100%;
+  }
+}

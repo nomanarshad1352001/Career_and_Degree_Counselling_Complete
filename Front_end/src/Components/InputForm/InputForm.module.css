@@ -1,0 +1,38 @@
+.inputForm{
+  padding: 10px;
+}
+.btnContainer {
+  display: flex;
+  gap: 10px;
+  margin: 5px 8px 0px 0px;
+justify-content: flex-end;
+}
+.errormsg{
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: block;
+}
+.inputForm input[type="text"],
+.inputForm input[type="number"],
+.inputForm select,
+.inputForm textarea {
+ width: 100%;
+  padding: 9px; 
+  border: 2px solid #ff4e22; 
+  border-radius: 10px;
+  resize: vertical;
+}
+.inputForm option {
+  background: #ff4e22;
+  border-radius: 10%;
+  font-weight: 800;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.inputForm label {
+  padding: 3px;
+  color: rgb(72, 71, 71);
+  font-weight: bold;
+  font-size: 12px;
+}

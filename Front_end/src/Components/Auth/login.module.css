@@ -1,0 +1,68 @@
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginMain {
+  margin-top: 8.6rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 2rem 2rem;
+  width: 450px;
+}
+.login {
+  margin: 1rem;
+  padding: 0.5rem 0;
+}
+.loginMain h1 {
+  color: #ff4e22;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+.loginBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 12px 10px 0px;
+}
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ff4e22;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.spanlink {
+  margin-top: 10px;
+  font-weight: bold;
+  color: rgb(75, 75, 255);
+  cursor: pointer;
+}
+.spanlink:hover {
+  color: rgb(0, 0, 0);
+  transition: transform 0.6s;
+  transform: scale(1.1);
+}
+@media screen and (max-width: 700px) {
+  .loginMain {
+    margin-top: 4.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .loginMain h1 {
+    font-size: 1.5rem;
+  }
+  .loginMain {
+    margin-top: 3rem;
+  }
+  .para {
+    text-align: center;
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .loginMain h1 {
+    font-size: 1rem;
+  }
+}
