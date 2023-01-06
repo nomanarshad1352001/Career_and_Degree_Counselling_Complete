@@ -1,4 +1,8 @@
 import { combineReducers } from "redux";
-import colleges from './colleges';
+import Colleges from './colleges';
+import Degrees from './degrees';
 
-export default combineReducers({ colleges });
+export default combineReducers({ 
+    degrees: Colleges, 
+    colleges: Degrees 
+});

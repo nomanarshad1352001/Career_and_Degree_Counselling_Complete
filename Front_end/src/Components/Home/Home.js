@@ -8,6 +8,7 @@ export default function Home(props) {
     <React.Fragment>
       <div className={clasess.Maincontainer}>
         <div className={clasess.container}>
+        
           <Intro
             Title="Intermediate / Higher Secondary School Certificate"
             subTitle="A College level Education"
@@ -15,8 +16,15 @@ export default function Home(props) {
             btnTitle="Your Info"
             onClickFunc={props.OnClick}
             image={interimg}
-            setPDCheck={props.setPDCheck}
           />
+          {/* <div className={clasess.mainImage}>
+            {" "}
+            <img className={clasess.mImage} src={interimg} alt="fireSpot" />
+          </div> */}
+          {/* <div className={clasess.mainImage}>
+            {" "}
+            <img className={clasess.mImage} src={Bsimg} alt="fireSpot" />
+          </div> */}
           <Intro
             Title="Bachelor Studies / Graduation and Masters "
             subTitle="A University level Education"

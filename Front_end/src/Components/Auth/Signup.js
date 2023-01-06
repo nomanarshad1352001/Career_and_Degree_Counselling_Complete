@@ -1,8 +1,10 @@
-import Button from "../UI/Button.js";
 import React, { useState } from "react";
 import FormInput from "./FormInput";
 import classes from "./signup.module.css";
 import {useNavigate} from "react-router-dom";
+import { GoogleLogin } from '@react-oauth/google';
+import jwt_decode from "jwt-decode";
+
 const SignUp = (props) => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -15,7 +17,7 @@ const SignUp = (props) => {
   const inputs = [
     {
       id: 1,
-      name: "user Name",
+      name: "username",
       type: "text",
       placeholder: "User Name",
       errorMessage:
@@ -47,9 +49,9 @@ const SignUp = (props) => {
         type: "password",
         placeholder: "Password",
         errorMessage:
-            "Password should be 3-20 characters and include at least 1 letter, 1 number and 1 special character!",
+            "Password should be 6-20 characters and include at least 1 letter, 1 number and 1 special character!",
         label: "Password",
-        pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{3,20}$`,
+        pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,20}$`,
         required:true
     },
     {
@@ -103,11 +105,22 @@ const SignUp = (props) => {
                 onChange={onChange}
               />
             ))}
-            <div className={classes.loginBtn}>
-              <Button  color="#54BAB9"btnTitle="Submit" />
+            <div>
+              <button className={classes.loginBtn}>Submit</button>
             </div>
           </form>
-        </div>
+          <GoogleLogin
+                onSuccess={credentialResponse => {
+                  console.log(credentialResponse.credential);
+                  var decoded = jwt_decode(credentialResponse.credential);
+                  console.log(decoded);
+                  navigate("/login")
+                }}
+                onError={() => {
+                  console.log('Login Failed');
+                }}
+                />     
+          </div>
         </div>
       </div>
       </div>

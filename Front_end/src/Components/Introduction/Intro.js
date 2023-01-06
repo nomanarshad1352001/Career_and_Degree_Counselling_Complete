@@ -3,7 +3,6 @@ import React from "react";
 import Button from "../UI/Button.js";
 // import eng from "../Material/Bs.jpg"
 const Intro = (props) => {
-  props.Title==="Intermediate / Higher Secondary School Certificate" && props.setPDCheck(true)
   return (
     <section className={classes.Card}>
       <div className={classes.header}>

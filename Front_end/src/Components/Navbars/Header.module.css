@@ -11,6 +11,7 @@
   background: red;
 width: 0;
 }
+
 .header {
   position: fixed;
   width: 100%;
@@ -26,7 +27,7 @@ width: 0;
   transition: all 0.3s ease-in-out;
   color: #ff4e22;
   display: grid;
-  grid-template-columns: 65px 1fr 100px;
+  grid-template-columns: 55px 1fr 100px;
   align-items: center;
   box-shadow: 0 2px 8px rgba(212, 212, 212, 0.25);
   z-index: 200;
@@ -37,8 +38,17 @@ width: 0;
   margin-right: 15px;
   margin-right: 15px;
 }
-.title {
+.intro{
+  display: flex;
+  position: fixed;
   grid-column: 2;
+  align-items: center;
+}
+.logo{
+  width: 50px;
+  justify-self: start;
+}
+.title {
   font-size: 20px;
   font-weight: bold;
   justify-self: start;
@@ -50,18 +60,12 @@ width: 0;
   }
 }
 @media (max-width: 400px) {
-  .title {
-    font-size: 14px;
+  .title{
+    font-size: 18px;
   }
 }
 @media (max-width: 350px) {
-  .title {
-    font-size: 13px;
-}
+
 }
 @media (max-width: 260px) {
-  .title {
-    font-size: 10px;
-    font-weight: bold;
-  }
 }

@@ -2,23 +2,25 @@ import { FETCH_ALL, CREATE, UPDATE, DELETE} from '../constants/actionTypes';
 
 import * as api from '../api';
 
-//Action Creaters
 
 export const getColleges = () => async (dispatch) =>{
     try {
         
         const { data } = await api.fetchColleges();
         dispatch({ type: FETCH_ALL ,payload: data});
-
+        
     } catch (error) {
         
         console.log(error.message);   
-    
+        
     }
 }
 
+//Action Creater
+
 export const createCollege = (college) => async (dispatch) => {
     try {
+        
         const { data } = await api.createCollege(college);
 
         dispatch ({type: CREATE , payload : data});
@@ -48,6 +50,8 @@ export const deleteCollege = (id) => async (dispatch) => {
 
         dispatch({type: DELETE , payload : id});
     } catch (error) {
+        
         console.log(error.message);
+    
     }
 }

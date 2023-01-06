@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import FormInput from "./FormInput";
 import classes from "./login.module.css";
-import {useNavigate } from "react-router-dom";
-import Button from "../UI/Button";
+import { useNavigate } from "react-router-dom";
 const Login = (props) => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -59,21 +58,18 @@ const Login = (props) => {
                     onChange={onChange}
                   />
                 ))}
-              <div className={classes.loginBtn}>
-                <Button
-                  onClickFunc={setValues}
-                  btnTitle="Login"
-                  padding="13px"
-                  color="brown"
-                />
+              <div>
+              <button className={classes.loginBtn} onClickFunc={setValues}>Login</button>
               </div>
             </form>
-            <hr></hr>
+            {/* <button className={classes.loginBtn} onClickFunc={setValues}>Google Login</button> */}
           </div>
         </div>
         <div className={classes.link}>
           <p className={classes.para}>New to Career & Degree Counselling?</p>
-          <div className={classes.spanlink} onClick={()=>navigate("/signup")}> <span>Sign Up</span></div>
+          <a className={classes.spanlink} href={"./signup"}>
+            <span>Sign Up</span>
+          </a>
         </div>
       </div>
       </div>

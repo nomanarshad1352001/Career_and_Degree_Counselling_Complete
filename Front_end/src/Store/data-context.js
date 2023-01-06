@@ -4,6 +4,6 @@ const DataContext = React.createContext({
   Degrees: [],
   UserData:{},
   Colleges:[],
-  IsLoggedIn:false,
+  IsLoggedIn:true,
 });
 export default DataContext;
