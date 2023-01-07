@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-// import degreeRoutes from './routes/degrees.js';
+import degreeRoutes from './routes/degrees.js';
 import collegeRoutes from './routes/colleges.js';
 // import userRoutes from './routes/users.js';
 
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({limit: "30mb" , extended: true}));
 app.use(cors());
 app.use(express.json());
 
-// app.use('/degrees', degreeRoutes);
+app.use('/degrees', degreeRoutes);
 app.use('/colleges', collegeRoutes);
 // app.use('/user', userRoutes);
 
