@@ -5,7 +5,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import degreeRoutes from './routes/degrees.js';
 import collegeRoutes from './routes/colleges.js';
-// import userRoutes from './routes/users.js';
+import userRoutes from './routes/users.js';
 
 const app = express();
 dotenv.config();
@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use('/degrees', degreeRoutes);
 app.use('/colleges', collegeRoutes);
-// app.use('/user', userRoutes);
+app.use('/user', userRoutes);
 
 const PORT = process.env.PORT || 5000;
 
