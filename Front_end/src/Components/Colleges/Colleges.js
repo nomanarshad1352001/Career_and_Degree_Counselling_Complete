@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 export default function Colleges() {
   const navigate = useNavigate();
   const ctx = useContext(DataContext);
-  const colleges=ctx.Colleges.filter((clg)=>clg.instituteType==="institute")
   return (
     <React.Fragment>
       <div className={classes.Maincontainer}>
@@ -15,7 +14,7 @@ export default function Colleges() {
         <h2 className={classes.title}>All Colleges</h2>
       </div>
     <div className={classes.container}>
-      {colleges.map((clg)=>{
+      {ctx.Colleges.map((clg)=>{
         return(<Intro
           padding='5px'
           key={clg.tag}

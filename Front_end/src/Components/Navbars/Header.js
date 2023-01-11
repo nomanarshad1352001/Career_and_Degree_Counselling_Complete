@@ -6,11 +6,19 @@ import { useNavigate } from "react-router-dom";
 import logo from "../Material/logo.png";
 export default function Header(props) {
   const Navfunc = () => {
-    props.setIsNavbarShow(true);
-  }
-  const navigate = useNavigate();
+    if(props.IsNavbarHide === false){ 
+      props.setIsNavbarShow(false);
+      props.setIsNavbarHide(true);
+    }else{
+      props.setIsNavbarShow(true);
+      props.setIsNavbarHide(false);
+    }
+    }
+    const navigate = useNavigate();
   const OnLogOut = () => {
     props.setIsLoggedIn(false);
+  navigate("/login")
+
   };
  const OnLoginShow=()=>{
   navigate("/login")
@@ -25,8 +33,8 @@ export default function Header(props) {
           </div>
         </button>}
         <div className={classes.intro}>
-        <img className={classes.logo} src={logo} alt={logo}></img>
-        <h1 className={classes.title}> Career & Degree Counselling </h1>
+          <img className={classes.logo} src={logo} alt={logo}></img>
+          <h1 className={classes.title}> Career & Degree Counselling </h1>
         </div>
         <div className={classes.login}>
           {props.IsLoggedIn?<Button color="#E9590C" btnTitle="Logout" onClickFunc={OnLogOut} />: <Button color="#53A25B" btnTitle="LogIn" onClickFunc={OnLoginShow} /> }

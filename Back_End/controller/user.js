@@ -12,6 +12,7 @@ export const getUser  = async (req, res)=>{
         res.status(404).json({message: error.message});
     }
 }
+
 export const signin = async (req, res) => {
 
     const { email, password } = req.body;
@@ -37,7 +38,7 @@ export const signin = async (req, res) => {
 
 export const signup = async (req, res) => {
 
-    const {username, email, password, confirmPassword, birthday} = req.body;
+    const {username, email, password, confirmPassword} = req.body;
 
     try {
         
@@ -49,7 +50,7 @@ export const signup = async (req, res) => {
 
             const hashedPassword = await bcrypt.hash(password, 12);
     
-            const result = await User.create({email, password: hashedPassword, username, birthday});
+            const result = await User.create({email, password: hashedPassword, username});
        
             const token = jwt.sign({email: result.email, id: result._id}, 'gcsit' , { expiresIn: "1h" });
     

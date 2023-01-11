@@ -1,8 +1,5 @@
-import express from 'express';
 import mongoose from 'mongoose';
 import CollegeData from '../models/collegesData.js';
-
-const router = express.Router();
 
 export const getColleges  = async (req, res)=>{
     try {

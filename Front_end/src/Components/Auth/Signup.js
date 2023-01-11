@@ -10,7 +10,6 @@ const SignUp = (props) => {
   const [values, setValues] = useState({
     username: "",
     email: "",
-    birthday: "",
     password: "",
     confirmPassword: "",
   });
@@ -34,14 +33,6 @@ const SignUp = (props) => {
       errorMessage: "It should be a valid email address!",
       label: "Email",
       required:true
-    },
-    {
-        id: 3,
-        name: "birthday",
-        type: "date",
-        placeholder: "Birthday",
-        label: "Birthday",
-        required:true
     },
     {
         id: 4,
@@ -74,7 +65,6 @@ const SignUp = (props) => {
     setValues({
       username: "",
       email: "",
-      birthday: "",
       password: "",
       confirmPassword: "",
     });
